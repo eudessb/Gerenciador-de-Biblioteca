@@ -1,0 +1,6 @@
+.vscode/
+*.o
+*.exe
+*.out
+*.log
+*.temp

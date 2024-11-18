@@ -1,5 +1,5 @@
 ## Gerenciador de Biblioteca
-Projeto de um gerenciador de biblioteca, escrito em __C__, para a disciplina de Estruturas de Dados Básicas II.
+Projeto de um sistema de gerenciamento de uma biblioteca, escrito em __C__ e utilizando uma árvore binária, para a disciplina de Estruturas de Dados Básicas II.
 
   
 

@@ -1,16 +1,8 @@
 #ifndef ARVORE_H
 #define ARVORE_H
 
-
-//Struct Nó
-typedef struct No
+typedef struct Livro
 {
-    Livro livro;
-    struct No* esquerda;
-    struct No* direita;
-} No;
-//Struct livro
-typedef struct Livro {
     int codigo;
     char titulo[100];
     char autor[100];
@@ -20,25 +12,27 @@ typedef struct Livro {
     int numero_paginas;
 } Livro;
 
-No* criar_no(Livro livro);
-//Função para criar árvore
-No* inicializar_arvore();
+typedef struct No
+{
+    Livro livro;
+    struct No *esquerda;
+    struct No *direita;
+} No;
 
-// Função para Inserir um Novo Livro
-void inserir_livro(No** raiz, Livro livro);
+No *criar_no(Livro livro);
 
-//Função para Buscar por Gênero
-void buscar_por_genero(No* raiz, char genero[]);
+No *inicializar_arvore();
 
-// Função para Carregar Livros do Arquivo CSV
-No* carregar_livros(char* nome_arquivo, No* raiz);
+void inserir_livro(No **raiz, Livro livro);
 
-//Função para Exibir a Árvore
-void exibir_arvore(No* raiz);
+void buscar_por_genero(No *raiz, char *genero);
 
-//Função para Liberar a Memória da Árvore
-void liberar_arvore(No* raiz);
+No *carregar_livros(char *nome_arquivo, No *raiz);
 
-int arv_vazia(No* raiz);
+void exibir_arvore(No *raiz);
+
+void liberar_arvore(No *raiz);
+
+int arv_vazia(No *raiz);
 
 #endif

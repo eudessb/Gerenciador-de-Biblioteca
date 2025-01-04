@@ -1,6 +1,6 @@
 #to_do
 CC = gcc
-CFLAGS = -Wall -Wextra -g -Iinclude
+CFLAGS = -Wall -Wextra -pedantic -g -Iinclude
 SRC = src/main.c src/arvore.c
 OBJ = $(SRC:.c=.o)
 EXEC = bin/main
@@ -18,3 +18,4 @@ run: $(EXEC)
 
 clean:
 	rm -f $(OBJ) $(EXEC)
+	@echo "Diretório limpo"
